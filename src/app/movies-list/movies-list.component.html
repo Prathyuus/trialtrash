@@ -1,0 +1,13 @@
+<!--<p>
+  movies-list works!
+</p>-->
+<input #Moviename id="moviename" placeholder="Search for Movies" />
+<button (click)="searchMovie(Moviename.value)">Find Movies</button>
+<div *ngFor="let movie of movies" class=movie-container>
+	<img src="{{'https://image.tmdb.org/t/p/w300_and_h450_bestv2/'+movie.poster_path}}">
+	<p>ID:{{movie.id}}</p>
+	<p>Name:{{movie.title}}</p>
+	<p>Description:{{movie.overview}}</p>
+	<p>Release Date:{{movie.release_date}}</p>
+
+</div>
